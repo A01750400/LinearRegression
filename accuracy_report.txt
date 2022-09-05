@@ -1,0 +1,8 @@
+Con el dataset slr01, se obtinen buenos resultados con un alfa de 0.001 (con 0.01 se obtienen malos resultados) y tan solo 10 epochs, reportando
+unicamente un error de 0.014.
+
+Con slr02, se obtiene una recta decente al usar los mismo hiperparametros pero se reporta un error de 18.71, aumentando los epochs se puede reducir el error,
+pero por muy poco, supongo que este nivel de error es provocado por la naturaleza de los datos del dataset.
+
+Con slr03, usar los parametros usados con slr01 producirá una recta bastante mala, ajustando el alfa a 0.01 y aumentando los epochs a 100, se puede obtener
+una recta más decente, el error sigue siendo bastante alto con uno de 10.2 reportado.
