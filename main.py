@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from linear_regression import gradient_descent
+from linear_regression import *
 
 if __name__ == "__main__":
     data = pd.read_csv("slr01.csv")
@@ -17,6 +17,7 @@ if __name__ == "__main__":
         m,b = gradient_descent(m, b, data, alfa)
 
     print(m, b)
+    print("Error: ", loss(m, b , data))
     plt.scatter(data.X, data.Y)
     plot_begin = int(data.X.min()) - 2
     plot_end = int(data.X.max()) + 2
