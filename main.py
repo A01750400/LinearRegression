@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 from linear_regression import gradient_descent
 
 if __name__ == "__main__":
-    data = pd.read_csv("slr02.csv")
+    data = pd.read_csv("slr01.csv")
+    #data = pd.read_csv("slr02.csv")
+    #data = pd.read_csv("slr03.csv")
     print(data)
 
     m = 0
@@ -16,7 +18,7 @@ if __name__ == "__main__":
 
     print(m, b)
     plt.scatter(data.X, data.Y)
-    plt.xlabel("chirps/sec for the stripped ground cricket")
-    plt.ylabel("temperature (F)")
-    plt.plot(list(range(10, 25)), [m * x + b for x in range(10,25)])
+    plot_begin = int(data.X.min()) - 2
+    plot_end = int(data.X.max()) + 2
+    plt.plot(list(range(plot_begin, plot_end)), [m * x + b for x in range(plot_begin, plot_end)])
     plt.show()
